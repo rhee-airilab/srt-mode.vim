@@ -15,7 +15,7 @@ VIM script to aid debugging .srt block (requires `vim` feature `+float` &amp; `s
 
 # Usage
 
-1. open .srt file in vim
+1. open .srt file in vim. .wav file must be in the same directory with the same name with your .srt file
 1. move cursor to a block you are interested
 1. press `gg` to listen block sound (using `play` executable in `sox` package)
 1. press `gn` to move to next block
