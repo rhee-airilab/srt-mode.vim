@@ -8,6 +8,7 @@ let g:srtplay_loaded=1
 autocmd BufEnter *.srt nnoremap <buffer> gg :call <sid>PlayBlock()
 autocmd BufEnter *.srt nnoremap <buffer> gn :call <sid>NextBlock()
 autocmd BufEnter *.srt nnoremap <buffer> g; :call <sid>ChangeTempo()
+autocmd BufEnter *.srt set so=7
 
 let g:srt_block_pattern = '^\(\d\+\)\_s\(\d\{2\}\):\(\d\{2\}\):\(\d\{2\}\),\(\d\{3\}\) --> \(\d\{2\}\):\(\d\{2\}\):\(\d\{2\}\),\(\d\{3\}\)'
 let g:srt_timestamp_pattern = '^\(\d\{2\}\):\(\d\{2\}\):\(\d\{2\}\),\(\d\{3\}\) --> \(\d\{2\}\):\(\d\{2\}\):\(\d\{2\}\),\(\d\{3\}\)$'
