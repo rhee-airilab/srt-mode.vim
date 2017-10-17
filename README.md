@@ -1,4 +1,4 @@
-# srt-mode.vim
+# srtplay.vim
 VIM script to aid debugging .srt block (requires `vim` feature `+float` &amp; `sox` executable)
 
 # Requirements
