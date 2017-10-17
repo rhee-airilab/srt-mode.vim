@@ -26,7 +26,7 @@ function! s:PlaySegment(wavfile,tm_st_f,tm_ed_f,tempo_f)
     let endpos  = a:tm_ed_f - a:tm_st_f
     let tempo   = a:tempo_f
     let cmd     = printf(g:srt_mode_play_fmt,wavfile,seek_to,endpos,tempo)
-    let result  = system(cmd)
+    :silent system(cmd)
 endfunction
 
 function! s:ChangeTempo()
@@ -49,9 +49,10 @@ function! s:PlayBlock()
 	let uu2	    = str2float(matched[8])
 	let tstart  = hh1*3600 + mm1*60 + ss1 + uu1 * 0.001
 	let tstop   = hh2*3600 + mm2*60 + ss2 + uu2 * 0.001
-	echo 'blocknum' blocknum 'tstart' tstart 'tstop' tstop
+	" echom printf('blocknum %d tstart %f tstop %f',blocknum,tstart,tstop)
 	let fn	    = resolve(expand('%'))
 	let wn	    = fnamemodify(fn,':r') . '.wav'
 	call s:PlaySegment(wn,tstart,tstop,g:srt_mode_tempo_list[g:srt_mode_tempo_sel])
+	call s:NextBlock()
     endif
 endfunction
