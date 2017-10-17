@@ -3,7 +3,7 @@ VIM script to aid debugging .srt block (requires `vim` feature `+float` &amp; `s
 
 # Requirements
 
-- `vim` with `+float` feature enabled ( check :version in your vim )
+- `vim` with `+float` feature enabled ( check `:version` in your vim )
 - `sox` executable installed
 
 # Install
