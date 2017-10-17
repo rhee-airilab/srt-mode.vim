@@ -26,7 +26,7 @@ function! s:PlaySegment(wavfile,tm_st_f,tm_ed_f,tempo_f)
     let endpos  = a:tm_ed_f - a:tm_st_f
     let tempo   = a:tempo_f
     let cmd     = printf(g:srt_mode_play_fmt,wavfile,seek_to,endpos,tempo)
-    :silent system(cmd)
+    :silent let output = system(cmd)
 endfunction
 
 function! s:ChangeTempo()
